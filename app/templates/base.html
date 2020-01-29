@@ -1,18 +1,21 @@
-<!doctype html>
+{% load static %}
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <title>Única estética da beleza.</title>
+    <link rel="stylesheet" href="{% static "css/base.css" %}">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=K2D"> 
   </head>
   <body>
-<style dir="static/css/base.css"></style>
-    <nav id="menu">
-      <ul>
+    <img src="{% static "img/unicalogo.jpg" %}" name="unicalogo"> 
+    <div class="menu">
+       <ul> 
         <li><a href="/servicos/">Serviços</a></li>
         <li><a href="/agenda/">Agenda</a></li>
         <li><a href="/fale-conosco/">Fale Conosco</a></li>
-        </ul>
-      </nav>
+       </ul>
+      </div>
     {% block content %}
     {% endblock %}
   </body>
