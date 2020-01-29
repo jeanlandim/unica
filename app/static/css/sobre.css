@@ -1,5 +1,6 @@
 .sobre img {
-  width: 10px;
-  display: block;
+  width: 400px;
+  margin-left:initial;
+  filter: drop-shadow(2px 2px 2px #5BC6D0);
 }
 

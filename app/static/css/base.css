@@ -2,32 +2,36 @@ img {
   width: 400px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 10;
   display: block;
 }
 
-.menu {
+.navbar {
+  position:relative;
   list-type: none;
   background-color: #5BC6D0;
   border-radius:15px;
   height:42px;
 }
 
-.menu li {
+
+.navbar li {
   display: inline-block;
 }
 
-.menu li a {
+.navbar li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 10px 14px;
+  padding: 10px 100px;
   text-decoration:none;
   font-family: 'K2D', serif;
   }
 
-.menu li a:hover {
+.navbar li a:hover {
   background-color: #F5BEFF;
-  text-shadow: 100px 100px  #ffffff;
 }
+
+
 
 
