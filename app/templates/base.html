@@ -9,7 +9,10 @@
   </head>
   <body>
        <nav class="navbar">
-       <ul> 
+       <ul>
+        <li><a href="/">
+            <img src="{% static "img/flor.png" %}" class="flor" >
+        </a></li>
         <li><a href="/servicos/">Serviços</a></li>
         <li><a href="/agenda/">Agenda</a></li>
         <li><a href="/fale-conosco/">Fale Conosco</a></li>
@@ -19,6 +22,7 @@
       <a href="/">
         <img src="{% static "img/unicalogo.jpg" %}" name="unicalogo" alt="Página inicial">
       </a>
+      <hr class="linha">
     {% block content %}
     {% endblock %}
   </body>

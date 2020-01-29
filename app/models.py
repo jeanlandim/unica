@@ -16,6 +16,10 @@ class AppTextos(models.Model):
     texto = models.TextField()
     pagina = models.CharField(max_length=20) # Página do site para determinado texto
 
+    class Meta:
+        verbose_name="Texto do Site"
+        verbose_name_plural="Textos do Site"
+
     def __str__(self):
         return self.titulo
 

@@ -11,10 +11,15 @@ img {
   list-type: none;
   background-color: #5BC6D0;
   border-radius:15px;
-  height:42px;
+  height:40.3px;
 }
 
+.flor {
+  padding:0px 30px;
+  width: 30px;
+  display: inline-block;
 
+}
 .navbar li {
   display: inline-block;
 }
@@ -23,13 +28,17 @@ img {
   display: block;
   color: white;
   text-align: center;
-  padding: 10px 100px;
+  padding: 10px 50px;
   text-decoration:none;
   font-family: 'K2D', serif;
   }
 
 .navbar li a:hover {
   background-color: #F5BEFF;
+}
+
+hr.linha {
+ border-top: 1px solid pink;
 }
 
 
