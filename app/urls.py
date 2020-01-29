@@ -19,4 +19,8 @@ from .views import *
 
 urlpatterns = [
     path('',index,name='index'),
+    path('servicos/',servicos,name='servicos'),
+    path('agenda/',agenda,name='agenda'),
+    path('fale-conosco/',fale_conosco,name='fale_conosco'),
+    path('sobre/',sobre,name='sobre')
 ]

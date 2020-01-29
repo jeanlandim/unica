@@ -23,10 +23,11 @@ img {
   padding: 10px 14px;
   text-decoration:none;
   font-family: 'K2D', serif;
-}
+  }
 
 .menu li a:hover {
   background-color: #F5BEFF;
+  text-shadow: 100px 100px  #ffffff;
 }
 
 
