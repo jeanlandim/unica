@@ -1,3 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
+<div class="servico">
+  <button class="titulo">
+   <img src='{% static 'img/flor.png' %}' sizes="16x16"/><b>{{titulo}}</b>  {{duracao}}
+  </button>
+  <div class="descricao">
+   {{texto}}<br>
+  </div>
+</div>
 {% endblock %}

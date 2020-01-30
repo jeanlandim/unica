@@ -4,8 +4,15 @@ from django.db import models
 class AppServicos(models.Model):
     servico = models.CharField(max_length=50)
     preco = models.FloatField()
-    duracao = models.CharField(max_length=2)
+    duracao = models.CharField(max_length=4)
     descricao = models.TextField()
+
+    class Meta:
+        verbose_name = "Serviços"
+        verbose_name_plural = "Serviços"
+
+    def __str__(self):
+        return self.servico
 # Agenda de disponibilidade dos serviços
 class AppAgenda(models.Model):
     servico_id = models.ForeignKey('AppServicos',on_delete=models.CASCADE)
