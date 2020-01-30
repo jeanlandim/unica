@@ -1,3 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
+<link rel="stylesheet" href="{% static "css/fale_conosco.css" %}">
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=K2D"> 
+<div class="mapa">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d122805.33708965426!2d-48.111943155077455!3d-15.87410113693799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3196396656ad%3A0x2f374b63a4656666!2s%C3%9Anica%20Est%C3%A9tica%20Facial%20e%20Corporal!5e0!3m2!1spt-BR!2sbr!4v1580344189743!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="">
+  </iframe>
+</div>
+<p><b>{{titulo}}</b></p>
+{% autoescape off %}
+<p>{{texto}}</p>
+{% endautoescape %}
 {% endblock %}

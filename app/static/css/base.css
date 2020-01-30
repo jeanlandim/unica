@@ -7,13 +7,14 @@ img {
 }
 
 .navbar {
+  position:relative;
   list-type: none;
   background-color: #5BC6D0;
   border-radius:15px;
   height:40.3px;
 }
 
-.flor {
+.flor  {
   padding:0px 30px;
   width: 30px;
   display: inline-block;
@@ -33,7 +34,7 @@ img {
   font-family: 'K2D', serif;
   }
 
-.navbar .seções:hover {
+.navbar li a:hover {
   background-color: #F5BEFF;
 }
 
