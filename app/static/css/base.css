@@ -34,7 +34,7 @@ img {
   font-family: 'K2D', serif;
   }
 
-.navbar li a:hover {
+.navbar .seções:hover {
   background-color: #F5BEFF;
 }
 
