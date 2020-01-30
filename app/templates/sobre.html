@@ -2,9 +2,13 @@
 {% load static %}
 {% block content %}
 <link rel="stylesheet" href="{% static "css/sobre.css" %}">
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=K2D"> 
 <div class="sobre">
   <img src="{% static "img/velas.jpg" %}" name="velas">
 </div>
 <p><b>{{titulo}}</b></p>
+{% autoescape off %}
 <p>{{texto}}</p>
+{% endautoescape %}
 {% endblock %}
