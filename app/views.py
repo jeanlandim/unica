@@ -3,9 +3,9 @@ from django.http import HttpResponseRedirect, request
 from .models import AppTextos
 # Página inicial do aplicativo
 def index(request):
-    #titulo = AppTextos.objects.get(pagina__startswith='/').titulo
-    #texto = AppTextos.objects.get(pagina__startswith='/').texto
-    return render(request,'index.html')
+    titulo = AppTextos.objects.get(pagina__startswith='index/').titulo
+    texto = AppTextos.objects.get(pagina__startswith='index/').texto
+    return render(request,'index.html',{'titulo':titulo,'texto':texto})
 def servicos(request):
     return render(request,'servicos.html')
 def agenda(request):

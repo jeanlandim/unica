@@ -1,3 +1,17 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
+<link rel="stylesheet" href="{% static "css/index.css" %}">
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=K2D"> 
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v5.0"></script>
+<div class="index">
+    <img src="{% static "img/lotus.jpg" %}" name="lotus">
+<p><b>{{titulo}}</b></p>
+{% autoescape off %}
+<p>{{texto}}</p>
+{% endautoescape %}
+<div class="fb-like" data-href="https://www.facebook.com/unicaeb/?locale2=pt_BR" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+</div>
 {% endblock %}

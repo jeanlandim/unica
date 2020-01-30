@@ -13,17 +13,19 @@
         <li><a href="/">
             <img src="{% static "img/flor.png" %}" class="flor" >
         </a></li>
-        <li><a href="/servicos/" class="seções">Serviços</a></li>
-        <li><a href="/agenda/" class="seções">Agenda</a></li>
-        <li><a href="/fale-conosco/" class="seções">Fale Conosco</a></li>
-        <li><a href="/sobre/" class="seções">Sobre a empresa</a></li>
+        <li><a href="/servicos/" class="seções"><b>Serviços</b></a></li>
+        <li><a href="/agenda/" class="seções"><b>Agenda</b></a></li>
+        <li><a href="/fale-conosco/" class="seções"><b>Fale Conosco</b></a></li>
+        <li><a href="/sobre/" class="seções"><b>Sobre a empresa</b></a></li>
        </ul>
       </nav>
       <a href="/">
         <img src="{% static "img/unicalogo.jpg" %}" name="unicalogo" alt="Página inicial">
       </a>
       <hr class="linha">
+    <div class="fade">
     {% block content %}
     {% endblock %}
+   </div>
   </body>
 </html>
