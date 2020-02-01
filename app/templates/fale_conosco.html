@@ -1,7 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<link rel="stylesheet" href="{% static "css/fale_conosco.css" %}">
+<style>
+.mapa iframe {
+  width: 1000px;
+  float: right;
+  filter: drop-shadow(2px 2px 2px #5BC6D0);
+}
+
+p {
+  font-family: 'K2D', serif;
+}
+</style>
 <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=K2D"> 
 <div class="mapa">

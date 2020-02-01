@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load list_index %}
 {% block content %}
-<div class="servico">
-  <button class="titulo">
-   <img src='{% static 'img/flor.png' %}' sizes="16x16"/><b>{{titulo}}</b>  {{duracao}}
+<div class="servicos">
+{% for servico in servicos %}
+  <button class="servicos">
+    <img src='{% static 'img/flor.png' %}' width="16" height="8"/><b> {{servico}}</b> {{duracoes|list_index:forloop.counter0}}
   </button>
   <div class="descricao">
-   {{texto}}<br>
+   {{descricoes|list_index:forloop.counter0}}<br>
   </div>
+{% endfor %}
 </div>
 {% endblock %}

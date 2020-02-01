@@ -7,16 +7,13 @@ def index(request):
     texto = AppTextos.objects.get(pagina__startswith='index/').texto
     return render(request,'index.html',{'titulo':titulo,'texto':texto})
 def servicos(request):
-    titulos = list()
-    textos = list()
-    duracoes = list() 
+    duracoes, descricoes, servicos = list(), list(), list()
     ids = AppServicos.objects.count()
-
     for id_ in range(1,ids+1):  
-        titulos = AppTextos.objects.get(pk=id_).titulo
-        textos = AppTextos.objects.get(pk=id_).texto
-        duracoes = AppTextos.objects.get(pk=id_).duracao
-    return render(request,'servicos.html',{'titulos':titulos,'textos':textos,'duracoes':duracoes})
+        servicos.append(AppServicos.objects.get(pk=id_).servico)
+        descricoes.append(AppServicos.objects.get(pk=id_).descricao)
+        duracoes.append(AppServicos.objects.get(pk=id_).duracao)
+    return render(request,'servicos.html',{'servicos':servicos,'descricoes':descricoes,'duracoes':duracoes})
 def agenda(request):
     return render(request,'agenda.html')
 def fale_conosco(request):
