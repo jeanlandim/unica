@@ -2,14 +2,26 @@
 {% load static %}
 {% load list_index %}
 {% block content %}
-<div class="servicos">
+<style>
+.card {
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+</style>
+<div class="justify-content-center">
+  <h1 align="center">Serviços</h1>
 {% for servico in servicos %}
-  <button class="servicos">
-    <img src='{% static 'img/flor.png' %}' width="16" height="8"/><b> {{servico}}</b> {{duracoes|list_index:forloop.counter0}}
-  </button>
-  <div class="descricao">
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">
+     <img src='{% static 'img/flor.png' %}' width="32" height="16"/><b> {{servico}}</b> {{duracoes|list_index:forloop.counter0}}
+    </h5>
+  <p class="card-text">
    {{descricoes|list_index:forloop.counter0}}<br>
-  </div>
+  </p>
+</div>
+</div><br>
 {% endfor %}
 </div>
 {% endblock %}
