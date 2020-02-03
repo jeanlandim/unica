@@ -4,4 +4,4 @@ RUN mkdir /unica
 WORKDIR /unica
 ADD . /unica
 
-RUN pip3 install -r vitaemanager/requirements.txt 
+RUN pip3 install -r unica/requirements.txt 
