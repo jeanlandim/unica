@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect, request
+from rest_framework import generics
 from .models import AppTextos, AppServicos
+from .serializers import *
 # Página inicial do aplicativo
 def index(request):
     titulo = AppTextos.objects.get(pagina__startswith='index/').titulo
@@ -24,4 +26,21 @@ def sobre(request):
     titulo = AppTextos.objects.get(pagina__startswith='sobre/').titulo
     texto = AppTextos.objects.get(pagina__startswith='sobre/').texto
     return render(request,'sobre.html',{'titulo':titulo,'texto':texto})
+# API 
+class AppTextosList(generics.ListCreateAPIView):
+    queryset = AppTextos.objects.all()
+    serializer_class = TextosSerializer
+class AppServicosList(generics.ListCreateAPIView):
+    queryset = AppServicos.objects.all()
+    serializer_class = ServicosSerializer
+class AppTextosListItems(generics.RetrieveUpdateDestroyAPIView):
+    queryset = AppTextos.objects.all()
+    serializer_class = TextosSerializer
+class AppServicosListItems(generics.RetrieveUpdateDestroyAPIView):
+    queryset = AppServicos.objects.all()
+    serializer_class = ServicosSerializer
+
+
+
+
 
