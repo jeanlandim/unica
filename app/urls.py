@@ -21,7 +21,6 @@ urlpatterns = [
     path('',index,name='index'),
     path('servicos/',servicos,name='servicos'),
     path('agenda/',agenda,name='agenda'),
-    path('fale-conosco/',fale_conosco,name='fale_conosco'),
     path('sobre/',sobre,name='sobre'),
     path('api-textos',AppTextosList.as_view(), name='api-textos'),
     path('api-textos/<pk>',AppTextosListItems.as_view(), name='api-textos'),

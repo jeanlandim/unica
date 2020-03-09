@@ -1,28 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=K2D"> 
-<style>
-  
-.index img {
-  width: 400px;
-  float: right; 
-  filter: drop-shadow(2px 2px 2px #5BC6D0);
-}
-
-p {
-  font-family: 'K2D', serif;
-}
-</style>
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v5.0"></script>
-<div class="index">
-    <img src="{% static "img/lotus.jpg" %}" name="lotus">
-<p><b>{{titulo}}</b></p>
-{% autoescape off %}
-<p>{{texto}}</p>
-{% endautoescape %}
-<div class="fb-like" data-href="https://www.facebook.com/unicaeb/?locale2=pt_BR" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
-</div>
+<section class="hero-wrap js-fullheight" style="background-image: url({% static 'images/zazen_woman.jpg' %});">
+      <div class="overlay">
+      </div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-start">
+          <div class="col-md-10 ftco-animate">
+            <h1 class="typewrite mb-4" data-period="4000" data-type='[ "Se cuide.", "Se ame.", "Seja Única."]'>
+              <span class="wrap"></span>
+            </h1>
+            <h5 class="col-md-8">
+		<p><b>{{titulo}}</b></p>
+		{% autoescape off %}
+		  <p>{{texto}}</p>
+		{% endautoescape %}
+		</div>
+	    </h5>
+          </div>
+        </div>
+      </div>
+ </section>
 {% endblock %}

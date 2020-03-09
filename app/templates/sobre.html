@@ -1,24 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<style>
-  .sobre img {
-  width: 400px;
-  float: right;
-  filter: drop-shadow(2px 2px 2px #5BC6D0);
-}
-
-p {
-  font-family: 'K2D', serif;
-}
-</style>
-<link rel="stylesheet"
-    href="https://fonts.googleapis.com/css?family=K2D"> 
-<div class="sobre">
-  <img src="{% static "img/velas.jpg" %}" name="velas">
+<section class="ftco-section d-md-flex bg-light">
+ <div class="container">
+  <div class="row justify-content-center">
+   <div class="col-md-10 text-center">
+    <img src="{% static 'images/flor.png' %}">
+    </img> 
+    <br>
+    <br>
+    <h1>{{titulo}}</h1>
+    {% autoescape off %}
+    <h2>{{texto}}</h2>
+    {% endautoescape %}
+   </div>
 </div>
-<p><b>{{titulo}}</b></p>
-{% autoescape off %}
-<p>{{texto}}</p>
-{% endautoescape %}
+</div>
+</section>
 {% endblock %}

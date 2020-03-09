@@ -10,7 +10,7 @@ def index(request):
     return render(request,'index.html',{'titulo':titulo,'texto':texto})
 def servicos(request):
     duracoes, descricoes, servicos = list(), list(), list()
-    ids = AppServicos.objects.count()
+    ids = AppServicos.objects.count()	
     for id_ in range(1,ids+1):  
         servicos.append(AppServicos.objects.get(pk=id_).servico)
         descricoes.append(AppServicos.objects.get(pk=id_).descricao)
@@ -18,10 +18,6 @@ def servicos(request):
     return render(request,'servicos.html',{'servicos':servicos,'descricoes':descricoes,'duracoes':duracoes})
 def agenda(request):
     return render(request,'agenda.html')
-def fale_conosco(request):
-    titulo = AppTextos.objects.get(pagina__startswith='fale-conosco/').titulo
-    texto = AppTextos.objects.get(pagina__startswith='fale-conosco/').texto
-    return render(request,'fale_conosco.html',{'titulo':titulo,'texto':texto})
 def sobre(request):
     titulo = AppTextos.objects.get(pagina__startswith='sobre/').titulo
     texto = AppTextos.objects.get(pagina__startswith='sobre/').texto
