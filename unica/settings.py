@@ -25,8 +25,7 @@ SECRET_KEY = '#4gljrf)@sp=td57#50v4fwwkrpw62v%^ir#r&u4h#mf#wypb$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['unicaestetica.herokuapp.com']
 
 # Application definition
 
